@@ -1,0 +1,47 @@
+.footer {
+  background-color: $dark;
+  color: $light;
+  padding: 30px 0;
+
+  // .footer__container
+  &__container {
+    display: grid;
+    grid-template-areas:
+      'logo nav'
+      'copyright .';
+      row-gap: 45px;
+  }
+
+  // .footer__logo
+  &__logo {
+    grid-area: 'logo';
+  }
+
+  // .footer__navigation
+  &__navigation {
+    grid-area: 'nav';
+    justify-self: end;
+  }
+
+  // .footer__copyright
+  &__copyright {
+    grid-area: 'copyright';
+  }
+}
+.container {
+}
+.logo {
+}
+.navigation {
+  // .navigation__list
+  &__list {
+  }
+
+  // .navigation__item
+  &__item {
+  }
+
+  // .navigation__link
+  &__link {
+  }
+}
