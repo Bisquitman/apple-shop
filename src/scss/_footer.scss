@@ -15,22 +15,28 @@
     @include tablet {
       grid-template-areas:
         'logo nav'
-        'copyright .';
+        'copyright copyright';
       row-gap: 45px;
     }
   }
 
   // .footer__logo
   &__logo {
-    grid-area: 'logo';
+    grid-area: logo;
   }
 
   // .footer__navigation
   &__navigation {
-    grid-area: 'nav';
+    grid-area: nav;
+    font-size: 16px;
+    font-weight: 400;
 
     @include tablet {
       justify-self: end;
+    }
+
+    @include laptop {
+      font-size: 20px;
     }
 
     &-list {
@@ -48,7 +54,7 @@
 
   // .footer__copyright
   &__copyright {
-    grid-area: 'copyright';
+    grid-area: copyright;
     padding-top: 10px;
     font-weight: 200;
     font-size: 14px;
@@ -56,6 +62,10 @@
 
     @include tablet {
       padding-top: 0;
+    }
+
+    @include laptop {
+      font-size: 16px;
     }
   }
 }
