@@ -3,14 +3,10 @@
   &__list {
     display: flex;
     align-items: center;
-    gap: 84px;
-  }
+    gap: 50px;
 
-  // .navigation__item
-  &__item {
-  }
-
-  // .navigation__link
-  &__link {
+    @include laptop {
+      gap: 84px;
+    }
   }
 }

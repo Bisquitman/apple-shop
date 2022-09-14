@@ -1,0 +1,46 @@
+.timer {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  text-align: center;
+
+  @include laptop {
+    gap: 8px;
+  }
+
+  // .timer__item
+  &__item {
+    flex: 0 0 80px;
+
+    @include laptop {
+      flex-basis: 120px;
+    }
+  }
+
+  // .timer__unit
+  &__unit {
+    background-color: $timer-bg;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 26px;
+    color: $light;
+    padding: 8px;
+    margin-bottom: 4px;
+
+    @include laptop {
+      padding: 11px;
+      font-size: 40px;
+      margin-bottom: 8px;
+    }
+  }
+
+  // .timer__unit-description
+  &__unit-description {
+    font-weight: 300;
+    font-size: 16px;
+
+    @include laptop {
+      font-size: 20px;
+    }
+  }
+}

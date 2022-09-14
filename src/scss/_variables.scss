@@ -1,22 +1,26 @@
 // Цвета
 $light: #fff;
 $dark: #000;
+$link: #2238FF;
+$hover-link: #0017e6;
+$border-color: #70a5d5;
+$timer-bg: #a3b6c7;
 
 // Медиа-запросы
 @mixin tablet {
-  @media (max-width: 768px) {
+  @media (min-width: 768px) {
     @content;
   }
 }
 
 @mixin laptop {
-  @media (max-width: 1024px) {
+  @media (min-width: 1024px) {
     @content;
   }
 }
 
 @mixin desktop {
-  @media (max-width: 1440px) {
+  @media (min-width: 1200px) {
     @content;
   }
 }

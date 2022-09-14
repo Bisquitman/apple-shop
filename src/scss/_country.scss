@@ -1,0 +1,39 @@
+.country {
+  // .country__btn
+  &__btn {
+    position: relative;
+    padding-right: 13px;
+    background-color: transparent;
+
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 9px;
+      height: 6px;
+      background: url('../img/arrow-country.svg') no-repeat center;
+    }
+  }
+
+  // .country__list
+  &__list {
+    display: none;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: calc(19 / 16);
+    background: #ffffff;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    padding: 16px;
+    // display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  // .country__item
+  &__item {
+  }
+}
