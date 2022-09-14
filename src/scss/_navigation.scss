@@ -9,4 +9,17 @@
       gap: 84px;
     }
   }
+
+  // .navigation__link
+  &__link {
+    transition: color 0.36s ease-in-out;
+
+    &:hover, &:focus {
+      color: $hover-link;
+    }
+
+    &:active {
+      color: #8793ff;
+    }
+  }
 }
