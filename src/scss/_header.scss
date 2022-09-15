@@ -4,6 +4,10 @@
   line-height: calc(24 / 20);
   padding: 16px 0 20px;
 
+  @include tablet {
+    padding: 24px 0;
+  }
+
   @include laptop {
     font-size: 20px;
   }

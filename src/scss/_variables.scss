@@ -2,9 +2,12 @@
 $light: #fff;
 $dark: #000;
 $link: #2238FF;
-$hover-link: #0017e6;
+$hover-link: #0017e5;
+$active-btn-color: #8793FF;
 $border-color: #70a5d5;
 $timer-bg: #a3b6c7;
+$light-grey-color: #ececec;
+$grey-color: #9e9c9c;
 
 // Медиа-запросы
 @mixin tablet {

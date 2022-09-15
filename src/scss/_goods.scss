@@ -11,6 +11,11 @@
   &__tagline {
     text-align: center;
     margin-bottom: 4px;
+
+    @include laptop {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
   }
 
   // .goods__title
@@ -19,6 +24,15 @@
     font-weight: 600;
     font-size: 26px;
     margin-bottom: 29px;
+
+    @include tablet {
+      margin-bottom: 36px;
+    }
+
+    @include laptop {
+      font-size: 40px;
+      margin-bottom: 40px;
+    }
   }
 
   // .goods__helper
@@ -31,14 +45,23 @@
     $arrow-size: 60px;
 
     position: absolute;
-    top: calc(50% - $arrow-size / 2);
+    top: calc(50% - $arrow-size);
     display: block;
-    width: 60px;
-    height: 60px;
+    width: $arrow-size;
+    height: $arrow-size;
     border-radius: 50%;
-    background-color: transparent;
+    // background-color: transparent;
     color: #7883e5;
+    background-color: $light;
+    z-index: 5;
     transition: color 0.2s ease-in-out;
+
+    @include laptop {
+      $arrow-size: 90px;
+      top: calc(50% - $arrow-size);
+      width: $arrow-size;
+      height: $arrow-size;
+    }
 
     &:hover,
     &:focus {
@@ -52,12 +75,36 @@
     // .goods__arrow_prev
     &_prev {
       left: -5px;
+
+      @include tablet {
+        left: 10px;
+      }
+
+      @include laptop {
+        left: 1px;
+      }
+
+      @include desktop {
+        left: 18px;
+      }
     }
 
     // .goods__arrow_next
     &_next {
       right: -5px;
       transform: rotate(180deg);
+
+      @include tablet {
+        right: 10px;
+      }
+
+      @include laptop {
+        right: 1px;
+      }
+
+      @include desktop {
+        right: 18px;
+      }
     }
   }
 }
