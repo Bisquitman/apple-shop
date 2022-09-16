@@ -23,9 +23,8 @@
   <link rel="preload" href="./assets/fonts/SFUIDisplay-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="./assets/fonts/SFUIDisplay-600.woff2" as="font" type="font/woff2" crossorigin>
 
-  <link rel="stylesheet" href="./assets/libs/swiper/swiper-bundle.min.css" />
-
   <link rel="stylesheet" href="./css/style.min.css" />
+  <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js" defer></script>
   <script src="./js/index.min.js" defer></script>
 </head>
 
@@ -55,20 +54,35 @@
           </svg>
         </button>
 
-        <ul class="country__list">
-          <li class="country__item">
-            <button class="country__btn">Russia, RUB</button>
-          </li>
-          <li class="country__item country__item_active">
-            <button class="country__btn">USA, USD</button>
-          </li>
-          <li class="country__item">
-            <button class="country__btn">Germany, EURO</button>
-          </li>
-          <li class="country__item">
-            <button class="country__btn">Great Britain, GBP</button>
-          </li>
-        </ul>
+        <div class="country__wrapper">
+          <ul class="country__list">
+            <li class="country__item">
+              <button class="country__choise" data-currency="USD">USA, USD</button>
+            </li>
+            <li class="country__item">
+              <button class="country__choise" data-currency="RUB">Russia, RUB</button>
+            </li>
+            <li class="country__item">
+              <button class="country__choise" data-currency="UAH">Ukraine, UAH</button>
+            </li>
+            <li class="country__item">
+              <button class="country__choise" data-currency="GBP"> Great Britain, GBP</button>
+            </li>
+            <li class="country__item">
+              <button class="country__choise" data-currency="AUD">Australia, AUD</button>
+            </li>
+            <li class="country__item">
+              <button class="country__choise" data-currency="KZT">Kazakhstan, KZT</button>
+            </li>
+            <li class="country__item">
+              <button class="country__choise" data-currency="BYN">Belarus, BYN</button>
+            </li>
+            <li class="country__item">
+              <button class="country__choise" data-currency="EUR">Germany, EUR</button>
+            </li>
+
+          </ul>
+        </div>
       </div>
     </div>
   </header>
@@ -82,16 +96,16 @@
 
           <ul class="hero__timer timer">
             <li class="timer__item">
-              <p class="timer__unit">364</p>
-              <p class="timer__unit-description">дня</p>
+              <p class="timer__unit timer__unit_day">00</p>
+              <p class="timer__unit-description timer__unit-description_day">дней</p>
             </li>
             <li class="timer__item">
-              <p class="timer__unit">23</p>
-              <p class="timer__unit-description">часа</p>
+              <p class="timer__unit timer__unit_hour">00</p>
+              <p class="timer__unit-description timer__unit-description_hour">часов</p>
             </li>
             <li class="timer__item">
-              <p class="timer__unit">45</p>
-              <p class="timer__unit-description">минут</p>
+              <p class="timer__unit timer__unit_minute">00</p>
+              <p class="timer__unit-description timer__unit-description_minute">минут</p>
             </li>
           </ul>
 
@@ -117,7 +131,7 @@
                   </div>
                   <div class="product__info">
                     <h3 class="product__title">iPhone 14 PRO</h3>
-                    <p class="product__price">$11050</p>
+                    <p class="product__price" data-price="11050">$11050</p>
                   </div>
                   <button class="product__more">
                     <span>Узнать больше</span>
@@ -134,7 +148,7 @@
                   </div>
                   <div class="product__info">
                     <h3 class="product__title">iPhone 14</h3>
-                    <p class="product__price">$799</p>
+                    <p class="product__price" data-price="799">$799</p>
                   </div>
                   <button class="product__more">
                     <span>Узнать больше</span>
@@ -151,7 +165,7 @@
                   </div>
                   <div class="product__info">
                     <h3 class="product__title">AirPods Pro</h3>
-                    <p class="product__price">$249</p>
+                    <p class="product__price" data-price="249">$249</p>
                   </div>
                   <button class="product__more">
                     <span>Узнать больше</span>
@@ -169,7 +183,7 @@
                   </div>
                   <div class="product__info">
                     <h3 class="product__title">Apple Watch Ultra</h3>
-                    <p class="product__price">$799</p>
+                    <p class="product__price" data-price="799">$799</p>
                   </div>
                   <button class="product__more">
                     <span>Узнать больше</span>
@@ -187,7 +201,7 @@
                   </div>
                   <div class="product__info">
                     <h3 class="product__title">Apple Watch Series 8</h3>
-                    <p class="product__price">$399</p>
+                    <p class="product__price" data-price="399">$399</p>
                   </div>
                   <button class="product__more">
                     <span>Узнать больше</span>
@@ -306,22 +320,20 @@
   </svg>
 
   <!-- Form -->
-  <div class="overlay">
-    <div class="modal">
-      <div class="modal__container">
-        <h1 class="modal__title">Узнай всё о новом iPhone 14</h1>
-        <form action="" class="form">
-          <div class="form__div">
-            <input type="text" class="form__input" placeholder=" ">
-            <label for="" class="form__label">Ваше имя</label>
-          </div>
-          <div class="form__div">
-            <input type="text" class="form__input" placeholder=" ">
-            <label for="" class="form__label">Телефон</label>
-          </div>
-          <input type="submit" class="form__button" value="Заказать консультацию">
-        </form>
-      </div>
+  <div class="overlay modal">
+    <div class="modal__container">
+      <h2 class="modal__title">Узнай всё о новом iPhone 14</h2>
+      <form class="modal__form form">
+        <label class="form__label">
+          <input type="text" class="form__input" placeholder=" ">
+          <span class="form__placeholder">Ваше имя</span>
+        </label>
+        <label class="form__label">
+          <input type="text" class="form__input" placeholder=" ">
+          <span class="form__placeholder">Телефон</span>
+        </label>
+        <button type="submit" class="form__submit">Заказать консультацию</button>
+      </form>
     </div>
   </div>
   <!-- ./Form -->

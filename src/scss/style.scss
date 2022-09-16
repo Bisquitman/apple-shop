@@ -1,17 +1,21 @@
-@import "normalize";
+@import 'normalize';
 
 @include normalize();
 
 @import 'variables';
-@import "fonts";
-@import "default";
-@import "header";
-@import "navigation";
-@import "country";
-@import "hero";
-@import "timer";
-@import "goods";
-@import "product";
-@import "features";
-@import "footer";
-@import "form";
+@import 'fonts';
+@import 'default';
+
+@import '../libs/swiper/swiper-bundle.min';
+@import '../libs/simplebar/simplebar';
+
+@import 'header';
+@import 'navigation';
+@import 'country';
+@import 'hero';
+@import 'timer';
+@import 'goods';
+@import 'product';
+@import 'features';
+@import 'footer';
+@import 'modal';

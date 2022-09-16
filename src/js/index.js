@@ -1,4 +1,9 @@
-import Swiper from '../assets/libs/swiper/swiper-bundle.esm.browser.min.js';
+import Swiper from '../libs/swiper/swiper-bundle.esm.browser.min.js';
+import country from './modules/country.js';
+import modal from './modules/modal.js';
+import timer from './modules/timer.js';
+import smoothScroll from './modules/smoothScroll.js';
+// import price from './modules/price.js';
 
 new Swiper('.goods__block', {
   slidesPerView: 1,
@@ -24,3 +29,13 @@ new Swiper('.goods__block', {
     nextEl: '.goods__arrow_next',
   },
 });
+
+modal();
+// price();
+country();
+
+smoothScroll(document.querySelector('.header__navigation'));
+smoothScroll(document.querySelector('.footer__navigation'));
+smoothScroll(document.querySelector('.hero__btn'));
+
+timer('2023/09/30 23:59');

@@ -22,9 +22,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+      max-width: 330px;
+      margin: 0 auto;
 
     @include tablet {
-      max-width: 330px;
+      margin: 0;
     }
 
     @include laptop {
