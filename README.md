@@ -21,3 +21,17 @@
 — Git и GitHub;
 
 — и многое, многое другое.
+
+***
+
+### Полезные ссылки
+
+- [Макет](https://www.figma.com/file/JUYQAaQfjPRLySLcGNlmH9/ProApple-14-(Intensive))
+
+- [Normalize.css](https://necolas.github.io/normalize.css/)
+
+- [Кастомный скролл](https://grsmto.github.io/simplebar/)
+
+- [API с котировками валют](https://apilayer.com/marketplace/fixer-api)
+
+- [Слайдер](https://swiperjs.com/)
